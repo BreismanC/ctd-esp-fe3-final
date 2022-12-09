@@ -4,7 +4,7 @@ import { createContext, useEffect, useMemo, useReducer } from "react";
 export const initialState = { theme: "light", data: [] };
 
 export const actions = {
-    setThemeLight: "setLight",
+    themeLight: "setLight",
     setThemeDark: "setDark",
     setData: "setData"
 }
@@ -34,11 +34,11 @@ export const ContextProvider = ({ children }) => {
     setData: (item) =>{
       dispatch({type: actions.setData, payload: item})
     },
-    setDarktema: ()=>{
+    setThemeDark: ()=>{
       dispatch({type: actions.setThemeDark})
     },
-    setLighttema: ()=>{
-      dispatch({type: actions.setThemeLight})
+    setThemeLight: ()=>{
+      dispatch({type: actions.themeLight})
     }
   }), [state, dispatch])
 

@@ -26,8 +26,8 @@ const DetailCard = () => {
       {
         dentist ?
           <section >
-          <div className= "">
-              <div className="col-sm-12 col-lg-6">
+          <div className= "col-sm-12 col-lg-6 container">
+              <div className="">
                 <img className="card-img-top" src="/images/doctor.jpg" alt="imagenCard" />
               </div>
               <Table dataSource={[dentist]}>

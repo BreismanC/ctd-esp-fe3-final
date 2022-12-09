@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ContextGlobal } from "./utils/global.context";
 import {setFavorite, isFavorite, removeFavorite} from "../Routes/Favs";
+import styles from "./module/Card.module.css";
 
 const Card = ({ name, username, id }) => {
   const{ theme } = useContext(ContextGlobal)
@@ -19,9 +20,7 @@ const Card = ({ name, username, id }) => {
   };
 
   return (
-    <div className="card">
-      {/* En cada card deberan mostrar en name - username y el id */}
-      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
+    <div className={`card ${darkMode ? styles.cardDark : ''}`}>
       <img className="card-img-top" src="/images/doctor.jpg" alt="dentist placeholder" width={100} />
       <div className="card-body">
       <Link to={`/detail/${id}`}>
