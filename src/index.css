@@ -28,9 +28,10 @@ h1{
 
 h2, h3, h4, h5{
   text-align: center;
+  color:black;
   padding: 0;
-  margin: 0;
-  padding: 2rem 0;
+  margin: 0.5rem;
+  padding: 0;
 }
 
 .navbar-nav{
@@ -39,17 +40,6 @@ h2, h3, h4, h5{
 
 .row{
   align-items: center;
-}
-
-a{
-  color: #000;
-  text-decoration: none;
-  margin: 5px;
-  cursor: pointer;
-}
-
-a:hover{
-  color: rgb(136, 136, 136);
 }
 
 form{
@@ -101,26 +91,8 @@ form{
   background-color: rgb(178, 206, 255);
 }
 
-
-.card{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
-
 .btn-light{
   background-color: rgb(214, 214, 214);
-}
-
-.card-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.125rem;
-  text-align: center;
-  margin: 0 auto;
 }
 
 table {
@@ -136,14 +108,6 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.card:hover{
-  border: 2px solid rgb(88, 80, 233);
 }
 
 tr:nth-child(even) {

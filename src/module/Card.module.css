@@ -38,6 +38,7 @@ a:hover {
 .card_image{
     width: 100%;
     border-radius: 5% 5% 0 0;
+    height: 100%;
 }
 
 .div_span{
@@ -61,7 +62,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   width: 80%;
-  gap: 2rem;
   margin: 1rem;
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Components/Card";
+import styles from '../module/Favs.module.css'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 export const getFavorite = () =>{
@@ -48,7 +49,7 @@ const Favs = () => {
   return (
     <>
       <h1>Favorite dentist</h1>
-      <div className="card-grid container">
+      <div className={`${styles.card_grid}`}>
         {localFavorites.length ? localFavorites.map((denstistFavorite) => <Card{...denstistFavorite} key={denstistFavorite.id}/>)
         : null}
       </div>

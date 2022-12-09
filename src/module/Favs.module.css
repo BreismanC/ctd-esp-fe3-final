@@ -1,8 +1,6 @@
-
-
 .card_grid {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 5rem;
     width: 90vw;
     height: auto;
