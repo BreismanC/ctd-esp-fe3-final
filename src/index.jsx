@@ -7,11 +7,13 @@ import { ContextProvider } from "./Components/utils/global.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <Router>
       <ContextProvider>
         <App />
       </ContextProvider>
-    </Router>
-  </React.StrictMode>
+  </Router>
+  </>
+  // </React.StrictMode>
 );
