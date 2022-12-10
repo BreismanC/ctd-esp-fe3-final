@@ -8,6 +8,7 @@ import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 import { useContext } from 'react';
 import { ContextGlobal } from './Components/utils/global.context';
+import AlertError from "./Components/utils/AlertError";
 
 function App() {
   const { theme } = useContext(ContextGlobal)
@@ -16,7 +17,7 @@ function App() {
     <div className={`app ${darkMode ? "dark" : "light"}`}>
       <Navbar />
       <Routes>
-        <Route index path="/home" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/favs" element={<Favs />} />
         <Route path="/detail/:id" element={ <Detail />} />

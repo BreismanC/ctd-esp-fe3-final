@@ -1,19 +1,16 @@
-import { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { ContextGlobal } from './utils/global.context';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ContextGlobal } from "./utils/global.context";
 import styles from "../module/Navbar.module.css";
 
-
 const Navbar = () => {
-  const { theme , setThemeDark, setThemeLight } = useContext(ContextGlobal)
-  const darkMode = theme === "dark" || false
+  const { theme, setThemeDark, setThemeLight } = useContext(ContextGlobal);
+  const darkMode = theme === "dark" || false;
 
   const changeTheme = () => {
-
-    if (darkMode) setThemeLight()
-
-    else setThemeDark()
-  }
+    if (darkMode) setThemeLight();
+    else setThemeDark();
+  };
 
   return (
     <header className="sticky-top">
@@ -24,7 +21,7 @@ const Navbar = () => {
         aria-label="Third navbar example"
       >
         <div className="container">
-          <Link className={`navbar-brand ${styles.navbarBrand}`} to="/home">
+          <Link className={`navbar-brand ${styles.navbarBrand}`} to="/">
             DH Odontology
           </Link>
           <div
@@ -33,7 +30,7 @@ const Navbar = () => {
           >
             <ul className="navbar-nav mb-2 mb-sm-0">
               <li className={`nav-item ${styles.navBarLink}`}>
-                <Link className="nav-link" to="/home">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
@@ -63,6 +60,6 @@ const Navbar = () => {
       </nav>
     </header>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

@@ -3,19 +3,18 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: 200px;
     border: 1px solid black;
     border-radius: 5%;
-    border: 0.5px solid rgb(136, 136, 136);
-    width: 25%;
+    border: 0.5px solid rgb(179, 179, 179); 
+    width: 20%;
 }
 
 .card:hover {
-    /* border: 1px solid rgb(246, 0, 0, 0.30); */
-    border: 1px solid rgb(250, 119, 0, 0.2);
+    border: 1px solid rgb(90, 165, 155);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-a {
+.card a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,7 @@ a {
   width: 100%;
 }
 
-a:hover {
+.card a:hover {
   color: rgb(136, 136, 136);
 }
 
@@ -44,25 +43,26 @@ a:hover {
 .div_span{
     position: absolute;
     font-weight: 400;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
 }
 
 .div_start{
   position: absolute;
   font-size: 25px;
-  top:10px;
-  right: 10px;
-  color:rgb(240, 255, 72)
+  top:8px;
+  right: 8px;
+  color:rgb(240, 255, 72, 0.8)
 }
 
 .card_body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 80%;
   margin: 1rem;
+  height: 7rem;
 }
 
 .card_body h2{
@@ -81,6 +81,23 @@ a:hover {
 }
 
 .favButton:hover{
-  background-color: rgba(250, 119, 0, 0.2);
+  background-color: rgb(136, 136, 136);
 }
 
+.dark{
+    background-color: #07070796;
+      color: #ffffff;
+}
+
+.dark h2, .dark h4, .dark .div_span{
+  color: #fff;
+}
+
+.dark .favButton{
+  background-color: #c6c7c8;
+  color: #000;
+}
+
+.dark .favButton:hover {
+  background-color: rgb(136, 136, 136);
+}
