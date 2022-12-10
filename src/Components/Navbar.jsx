@@ -16,40 +16,35 @@ const Navbar = () => {
   }
 
   return (
-    <header className="sticky-top">
-      <nav
-        className={`navbar navbar-expand-sm ${
-          darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"
-        }`}
-        aria-label="Third navbar example"
-      >
-        <div className="container">
-          <Link className={`navbar-brand ${styles.navbarBrand}`} to="/home">
-            DH Odontology
-          </Link>
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarsExample03"
-          >
-            <ul className="navbar-nav mb-2 mb-sm-0">
-              <li className={`nav-item ${styles.navBarLink}`}>
-                <Link className="nav-link" to="/home">
+    <header>
+      <nav className={`${styles.navContainer} ${darkMode ? styles.navBarDark  : ""}`}>
+          <div className={`${styles.container}`}>
+            <ul className={`${styles.setNav}`}>
+              <li>
+              <Link to="/home" className={`${styles.navbarBrand}`} >
+              DH Odontology
+              </Link>
+              </li>
+              <div className={`${styles.containerRoutes}`}>
+              <li className={`${styles.linkNav}`}>
+                <Link to="/home" className={`${styles.sizeAncle}`} >
                   Home
                 </Link>
               </li>
-              <li className={`nav-item ${styles.navBarLink}`}>
-                <Link className="nav-link" to="/favs">
+              <li className={`${styles.linkNav}`}>
+                <Link to="/favs" className={`${styles.sizeAncle}`} >
                   Favorite
                 </Link>
               </li>
-              <li className={`nav-item ${styles.navBarLink}`}>
-                <Link className="nav-link" to="/Contact">
+              <li to="/Contact" className={` ${styles.linkNav}`}>
+                <Link className={`${styles.sizeAncle}`} >
                   Contact
                 </Link>
               </li>
-              <li className={`nav-item`}>
+              </div>
+              <li className={`${styles.linkNav}`}>
                 <button
-                  className={`btn btn-${darkMode ? "light" : "dark"} ${
+                  className={`${darkMode ? "" : styles.btndark} ${
                     styles.btnStyle
                   }`}
                   onClick={changeTheme}
@@ -58,7 +53,6 @@ const Navbar = () => {
                 </button>
               </li>
             </ul>
-          </div>
         </div>
       </nav>
     </header>

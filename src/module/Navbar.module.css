@@ -1,20 +1,67 @@
+.navContainer{
+  background-color: #f0f0f0;
+}
+
+
 .navbarBrand {
-  font-size: 30px;
-}
-
-.navbarBrand::first-letter {
-  color: #e20c0c;
-}
-
-.navBarLink {
+  display: flex;
+  font-size: 40px;
   text-decoration: none;
-  padding: 10px;
+}
+.containerRoutes{
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+.navBarLink ul{
+  text-decoration: none;
   border-radius: 9px;
-  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
+
+.setNav{
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  margin: auto;
+  font-weight: bold;
+}
+
+.linkNav a{
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sizeAncle{
+  font-size: 25px;
+  
+}
+.linkNav a:hover{
+  color: rgb(136, 136, 136);
+  font-size: 30px;
+} 
 
 .btnStyle{
   width: 3rem;
   height: 3rem;
+}
+
+.btndark{
+  background-color: #000;
+}
+
+.navBarDark{
+  background-color: #000;
+}
+
+.navBarDark a{
+  color: #f0f0f0;
+  cursor: pointer;
 }

@@ -13,7 +13,7 @@ function App() {
   const { theme } = useContext(ContextGlobal)
   const darkMode = theme === "dark" || false
   return (
-    <div className={`app ${darkMode ? "dark" : "light"}`}>
+    <div className={` ${darkMode ? "dark" : "light"}`}>
       <Navbar />
       <Routes>
         <Route index path="/home" element={<Home />} />
