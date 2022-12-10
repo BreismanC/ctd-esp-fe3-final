@@ -1,19 +1,16 @@
-import { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { ContextGlobal } from './utils/global.context';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ContextGlobal } from "./utils/global.context";
 import styles from "../module/Navbar.module.css";
 
-
 const Navbar = () => {
-  const { theme , setThemeDark, setThemeLight } = useContext(ContextGlobal)
-  const darkMode = theme === "dark" || false
+  const { theme, setThemeDark, setThemeLight } = useContext(ContextGlobal);
+  const darkMode = theme === "dark" || false;
 
   const changeTheme = () => {
-
-    if (darkMode) setThemeLight()
-
-    else setThemeDark()
-  }
+    if (darkMode) setThemeLight();
+    else setThemeDark();
+  };
 
   return (
     <header>
@@ -57,6 +54,6 @@ const Navbar = () => {
       </nav>
     </header>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
