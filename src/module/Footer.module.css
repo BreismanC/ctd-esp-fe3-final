@@ -7,10 +7,11 @@ footer{
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
+    border-top: 10px solid #f21d1d;
 }
 
 footer>div>img {
-    width: 200px;
+    width: 250px;
     margin: 0;
 }
 
@@ -27,10 +28,23 @@ footer>div>p {
 }
 
 .footer_icons{
-    font-size: 25px;
+    font-size: 30px;
+    color:black;
 }
 
 .footer_icons:hover {
-    font-size: 30px;
+    font-size: 35px;
 }
 
+.dark {
+    background-color: #07070796;
+    color: #ffffff;
+}
+
+.dark .footer_icons{
+    color: #ffffff;
+}
+
+.dark image{
+    background-color: rgba(255,255,255) !important;
+}

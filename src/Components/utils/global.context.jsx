@@ -1,9 +1,10 @@
-import { createContext, useEffect, useMemo, useReducer, useState } from "react";
-import { getDataFromStorage, setDataInStorage } from "./localStorage";
+import { createContext, useEffect, useMemo, useReducer } from "react";
 
+//Definicion del contexto y el estado inicial del useReducer
 export const initialState = { theme: "light", data: [] };
 export const ContextGlobal = createContext(undefined);
 
+//Posibles acciones que permite el useReducer
 export const actions = {
   themeLight: "setLight",
   setThemeDark: "setDark",
@@ -27,7 +28,6 @@ export const reducer = (state, action) => {
 };
 
 export const ContextProvider = ({ children }) => {
-  const [favs, setFavs] = useState(getDataFromStorage);
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const providerState = useMemo(
@@ -53,23 +53,6 @@ export const ContextProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => providerState.setData(data));
   }, [providerState]);
-
-  // useEffect(() => {
-  //   setDataInStorage(favs);
-  // }, [favs]);
-
-  //Funcion para compartir en el contexto global que me permite modificar los datos del localStorage
-  const changeFavs = (element) => {
-    //Comprobar si el elemento existe en el localStorage, si este es el caso, eliminarlo, sino agregarlo
-    const data = getDataFromStorage();
-    const busqueda = data.findIndex((item) => item.id === element.id);
-    if (busqueda !== -1) {
-      data.splice(busqueda, 1);
-      setFavs(data);
-    } else {
-      setFavs([...data, element]);
-    }
-  };
 
   return (
     <ContextGlobal.Provider value={providerState}>

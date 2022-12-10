@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../module/Footer.module.css";
+import { ContextGlobal } from "./utils/global.context";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -8,8 +9,10 @@ import {
 } from "@ant-design/icons";
 
 const Footer = () => {
+  const { theme } = useContext(ContextGlobal);
+  const darkMode = theme === "dark" || false;
   return (
-    <footer>
+    <footer className={`${darkMode ? styles.dark : ""}`}>
       <div>
         <p>Powered by</p>
         <img src="./images/DH.png" alt="DH-logo" />
