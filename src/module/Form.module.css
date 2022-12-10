@@ -18,11 +18,12 @@ form{
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2em 0 10em 0;
+  padding: 0.5em 0 1.5em 0;
 }
 
 .input_form {
   margin: 10px 0 20px 0;
+  width: 100%;
   padding: 6px;
   border: none;
   border-radius: 10px;
@@ -30,13 +31,15 @@ form{
 }
 
 .button_form {
-  margin: 20px 0 50px 0;
-  padding: 6px;
+  margin: 5px 0 5px 0;
+  padding: 10px;
   border: none;
+  width: 50%;
   border-radius: 10px;
   background-color: rgb(220, 53, 69);
   font-size: 1rem;
   font-weight: 700;
+  align-self: center;
 }
 
 .button_form:hover {

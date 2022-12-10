@@ -1,0 +1,43 @@
+.containerDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.containerDetail img{
+    height: 40vh;
+}
+.containerTable{
+    width: 80%;
+    animation: none;
+}
+.whiteTable Table{
+    background-color: #f0f0f0;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.ant-table-thead tr th{
+    background-color: aqua;
+}
+
+.darkDetails h1{
+    color: #fff;
+}
+
+.darkDetails .darkTable{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+}
+th .darkDetails .ant-table-cell{
+    background-color: black;
+}
+tbody{
+    animation: none;
+}
+
+
+
+
+

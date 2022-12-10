@@ -10,8 +10,8 @@ const Contact = () => {
   const darkMode = theme === "dark" || false;
   return (
     <div className={`${styles.container_form} ${darkMode ? styles.dark : ""}`}>
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+      <h2 className={`${styles.sizeTitle}`}>Want to know more?</h2>
+      <p className={`${styles.sizeText}`}>Send us your questions and we will contact you</p>
       <Form />
     </div>
   );

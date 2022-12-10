@@ -39,6 +39,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+.linkNavTittle a{
+  color: #000;
+  
+}
+
 .sizeAncle{
   font-size: 25px;
   

@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav className={`${styles.navContainer} ${darkMode ? styles.navBarDark  : ""}`}>
           <div className={`${styles.container}`}>
             <ul className={`${styles.setNav}`}>
-              <li>
+              <li className={`${styles.linkNavTittle}`} >
               <Link to="/home" className={`${styles.navbarBrand}`} >
               DH Odontology
               </Link>
@@ -33,8 +33,8 @@ const Navbar = () => {
                   Favorite
                 </Link>
               </li>
-              <li to="/Contact" className={` ${styles.linkNav}`}>
-                <Link className={`${styles.sizeAncle}`} >
+              <li className={` ${styles.linkNav}`}>
+                <Link to="/contact" className={`${styles.sizeAncle}`} >
                   Contact
                 </Link>
               </li>
